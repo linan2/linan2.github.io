@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Li Nan (李楠) - Speech Processing Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #667eea;
+            border: 4px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header-text h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.2s;
+        }
+
+        .interest-tag:hover {
+            transform: translateY(-2px);
+        }
+
+        .education-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .education-item .institution {
+            color: #666;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+        }
+
+        .education-item .details {
+            color: #888;
+            font-size: 0.95em;
+        }
+
+        .education-item .supervisor {
+            color: #555;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .publication-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .publication-item .type {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+
+        .publication-item.journal .type {
+            background: #764ba2;
+        }
+
+        .publication-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .publication-item .authors {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .publication-item .venue {
+            color: #888;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .patent-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f0f0f0;
+            border-radius: 6px;
+        }
+
+        .patent-item h3 {
+            font-size: 1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .patent-item .number {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .awards-list {
+            list-style: none;
+        }
+
+        .awards-list li {
+            padding: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .awards-list li .award-year {
+            background: white;
+            color: #f5576c;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .projects-list {
+            list-style: none;
+        }
+
+        .projects-list li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .projects-list li h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .projects-list li .role {
+            color: #764ba2;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .projects-list li .period {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .header-text h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="avatar">李</div>
+                <div class="header-text">
+                    <h1>Li Nan (李楠)</h1>
+                    <h2>Ph.D. Candidate in Computer Science and Technology</h2>
+                    <div class="contact-info">
+                        <a href="mailto:tju_linan@tju.edu.cn">📧 tju_linan@tju.edu.cn</a>
+                        <a href="https://scholar.google.com.hk/citations?user=9BVJbdsAAAAJ&hl=zh-CN" target="_blank">📚 Google Scholar</a>
+                        <a href="https://github.com/linan2" target="_blank">🔧 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#research">研究方向</a></li>
+                <li><a href="#education">教育经历</a></li>
+                <li><a href="#publications">发表论文</a></li>
+                <li><a href="#patents">专利</a></li>
+                <li><a href="#awards">荣誉奖项</a></li>
+                <li><a href="#projects">参与项目</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="section">
+            <h2>关于我</h2>
+            <p>我是天津大学计算机科学与技术专业的博士候选人（2020.9-2025.3），师从王龙标教授和党建武教授。我的研究专注于语音信号处理领域，包括语音增强、语音分离、语音识别、语音端点检测等方向。曾在日本北陆先端科学技术大学院大学（JAIST）和新加坡国立大学进行联合培养，拥有丰富的国际研究经验。</p>
+        </section>
+
+        <section id="research" class="section">
+            <h2>研究方向</h2>
+            <div class="interests">
+                <span class="interest-tag">语音增强</span>
+                <span class="interest-tag">语音分离</span>
+                <span class="interest-tag">声学</span>
+                <span class="interest-tag">语音端点检测</span>
+                <span class="interest-tag">语音识别</span>
+                <span class="interest-tag">语音大模型</span>
+                <span class="interest-tag">麦克风阵列</span>
+                <span class="interest-tag">深度学习</span>
+                <span class="interest-tag">听觉感知</span>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>教育经历</h2>
+            <div class="education-item">
+                <h3>博士 - 计算机科学与技术</h3>
+                <div class="institution">天津大学 | 2020.9 - 2025.3</div>
+                <div class="details">研究方向：语音增强</div>
+                <div class="supervisor">导师：王龙标 & 党建武</div>
+            </div>
+
+            <div class="education-item">
+                <h3>联合培养博士</h3>
+                <div class="institution">新加坡国立大学 (National University of Singapore) | 2023.11 - 2024.11</div>
+                <div class="details">天津大学和新加坡国立大学联合培养博士生（国家留学基金委奖学金）</div>
+                <div class="supervisor">导师：Haizhou Li (IEEE Fellow) & 王龙标 & 党建武</div>
+            </div>
+
+            <div class="education-item">
+                <h3>硕士 - 计算机技术</h3>
+                <div class="institution">天津大学 | 2017.9 - 2020.6</div>
+                <div class="details">研究方向：远场语音识别 | 学位：工学硕士</div>
+                <div class="supervisor">导师：王龙标 & 党建武</div>
+            </div>
+
+            <div class="education-item">
+                <h3>硕士 - 情报学系（计算机）/UNOKI-研</h3>
+                <div class="institution">日本北陆先端科学技术大学院大学 (JAIST) | 2019.4 - 2020.4</div>
+                <div class="details">天津大学双学位项目 | 研究方向：语音端点检测 | 学位：理学硕士</div>
+                <div class="supervisor">导师：Masashi Unoki & Masato Akagi</div>
+            </div>
+
+            <div class="education-item">
+                <h3>本科 - 电子信息科学与技术</h3>
+                <div class="institution">山东理工大学 | 2012.9 - 2016.9</div>
+                <div class="details">学位：工学学士</div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>发表论文</h2>
+
+            <h3 style="margin: 20px 0 15px 0; color: #667eea;">期刊论文 (Journal Papers)</h3>
+
+            <div class="publication-item journal">
+                <span class="type">中科院 1 区 Top</span>
+                <h3>Dual-stream Noise and Speech Information Perception based Speech Enhancement</h3>
+                <div class="authors">Li, Nan, Ge, M., Wang, L., & Dang, J.</div>
+                <div class="venue">Expert Systems With Applications (ESWA), 2024</div>
+            </div>
+
+            <div class="publication-item journal">
+                <span class="type">中科院 2 区 · 语音顶级期刊 · CCF-B</span>
+                <h3>Robust voice activity detection using an auditory-inspired masked modulation encoder based convolutional attention network</h3>
+                <div class="authors">Li Nan, Wang L, Ge M, et al.</div>
+                <div class="venue">Speech Communication, 2024, 157: 103024</div>
+            </div>
+
+            <div class="publication-item journal">
+                <span class="type">中科院 2 区 · 语音顶级期刊 · CCF-B</span>
+                <h3>HC-APNet: Harmonic Compensation Auditory Perception Network for Low-complexity Speech Enhancement</h3>
+                <div class="authors">Li Nan, Wang L, Ge M, et al.</div>
+                <div class="venue">Speech Communication, 2024</div>
+            </div>
+
+            <h3 style="margin: 30px 0 15px 0; color: #667eea;">会议论文 (Conference Papers)</h3>
+
+            <div class="publication-item">
+                <span class="type">CCF-B</span>
+                <h3>Speech and noise dual-stream spectrogram refine network with speech distortion loss for robust speech recognition</h3>
+                <div class="authors">Lu Haoyu, Li Nan*, Song T, et al.</div>
+                <div class="venue">ICASSP 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <span class="type">CCF-B</span>
+                <h3>Robust Voice Activity Detection Using a Masked Auditory Encoder Based Convolutional Neural Network</h3>
+                <div class="authors">Li, Nan, Wang, L., Unoki, M., Li, S., Wang, R., Ge, M., & Dang, J.</div>
+                <div class="venue">ICASSP 2021, pp. 6828-6832</div>
+            </div>
+
+            <div class="publication-item">
+                <span class="type">CCF-C</span>
+                <h3>Global Signal-to-noise Ratio Estimation Based on Multi-subband Processing Using Convolutional Neural Network</h3>
+                <div class="authors">Li, Nan, Ge, M., Wang, L., Unoki, M., Li, S., & Dang, J.</div>
+                <div class="venue">INTERSPEECH 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <span class="type">CCF-C</span>
+                <h3>A Fast Convolutional Self-attention Based Speech Dereverberation Method for Robust Speech Recognition</h3>
+                <div class="authors">Li, Nan, Ge, M., Wang, L., & Dang, J.</div>
+                <div class="venue">ICONIP, pp. 295-305</div>
+            </div>
+
+            <div class="publication-item">
+                <span class="type">CCF-C</span>
+                <h3>Dual-stream Speech Dereverberation Network Using Long-term and Short-term Cues</h3>
+                <div class="authors">Li, Nan, Ge, M., Wang, L., & Dang, J.</div>
+                <div class="venue">IJCNN 2022, pp. 1-5</div>
+            </div>
+
+            <div class="publication-item">
+                <span class="type">CCF-B</span>
+                <h3>Svad: A robust, low-power, and light-weight voice activity detection with spiking neural networks</h3>
+                <div class="authors">Yang Q, Liu Q, Li Nan, et al.</div>
+                <div class="venue">ICASSP 2024, pp. 221-225</div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.95em; color: #666;">
+                更多论文可以通过 <a href="https://scholar.google.com.hk/citations?user=9BVJbdsAAAAJ&hl=zh-CN" style="color: #667eea;">Google Scholar</a> 查看
+            </p>
+        </section>
+
+        <section id="patents" class="section">
+            <h2>专利</h2>
+
+            <div class="patent-item">
+                <h3>一种基于听觉感知的低复杂度语音增强方法</h3>
+                <div class="number">专利号：CN117219102A</div>
+                <div class="authors">发明人：王龙标, 李楠, 党建武</div>
+            </div>
+
+            <div class="patent-item">
+                <h3>基于听觉滤波器组和卷积神经网络的全局信噪比估计方法</h3>
+                <div class="number">专利号：CN112885375A</div>
+                <div class="authors">发明人：王龙标, 李楠, 党建武</div>
+            </div>
+
+            <div class="patent-item">
+                <h3>基于生成对抗网络的深度特征的语音去混响方法</h3>
+                <div class="number">专利号：CN109887489B</div>
+                <div class="authors">发明人：王龙标, 李楠, 党建武</div>
+            </div>
+
+            <div class="patent-item">
+                <h3>一种利用 CNN 的 U-NET 结构进行远场语音去混响的方法</h3>
+                <div class="number">专利号：CN109949821B</div>
+                <div class="authors">发明人：李楠, 关波</div>
+            </div>
+        </section>
+
+        <section id="awards" class="section">
+            <h2>荣誉奖项</h2>
+            <ul class="awards-list">
+                <li>
+                    <span class="award-year">2023</span>
+                    <span>Intel Neuromorphic Deep Noise Suppression Challenge Top 2</span>
+                </li>
+                <li>
+                    <span class="award-year">2023</span>
+                    <span>China Scholarship Council (CSC)</span>
+                </li>
+                <li>
+                    <span class="award-year">2022</span>
+                    <span>Audio Deep Synthesis Detection (ADD) Challenge Top 4</span>
+                </li>
+                <li>
+                    <span class="award-year">2019</span>
+                    <span>IFly Dialect Recognition Challenge Algorithm Elite Award</span>
+                </li>
+                <li>
+                    <span class="award-year">-</span>
+                    <span>CET-6</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>参与项目</h2>
+            <ul class="projects-list">
+                <li>
+                    <h3>国家重点研发计划"智能机器人"专项 (No. 2018YFB1305200)</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2019年6月 - 2022年5月</div>
+                    <p>基于语言认知机制的类脑自然语言识别与交互研究</p>
+                </li>
+
+                <li>
+                    <h3>国家自然科学基金面上项目 (No. 62176182)</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2022年1月 - 2025年12月</div>
+                    <p>复杂场景下的声纹识别与反欺诈研究</p>
+                </li>
+
+                <li>
+                    <h3>国家自然科学基金面上项目 (No. 61771333)</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2018年1月 - 2021年12月</div>
+                    <p>混响环境下的多口音语音识别研究</p>
+                </li>
+
+                <li>
+                    <h3>天津市科技重大专项 (No. 18ZXZNGX00330)</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2018年10月 - 2021年9月</div>
+                    <p>复杂环境下机器人语音对话关键技术及系统实现</p>
+                </li>
+
+                <li>
+                    <h3>华为横向项目 - 华为智能音幕</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2021年7月 - 2022年6月</div>
+                </li>
+
+                <li>
+                    <h3>新大陆横向项目 - 鲁棒性语音识别和声纹识别研究</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2021年8月 - 2022年7月</div>
+                </li>
+
+                <li>
+                    <h3>滴滴出行横向项目 - 基于分布式麦克风的语音增强方法</h3>
+                    <div class="role">参与人</div>
+                    <div class="period">2021年11月 - 2022年10月</div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Li Nan. All rights reserved.</p>
+            <a href="https://github.com/linan2/linan2.github.io" class="github-link" target="_blank">🔧 View this site on GitHub</a>
+        </footer>
+    </div>
+</body>
+</html>
