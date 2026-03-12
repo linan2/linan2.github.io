@@ -3,7 +3,7 @@
 ## 第一步：在GitHub上创建仓库
 
 1. 访问 https://github.com/new
-2. 仓库名称必须是：`linan2.github.io`（必须完全一致）
+2. 仓库名称必须是：`linan.github.io`（必须完全一致）
 3. 选择 Public 公开仓库
 4. 点击 "Create repository"
 
@@ -12,7 +12,7 @@
 在项目目录中执行以下命令：
 
 ```bash
-git remote add origin https://github.com/linan2/linan2.github.io.git
+git remote add origin https://github.com/linan/linan.github.io.git
 ```
 
 ## 第三步：推送代码到GitHub
@@ -30,7 +30,7 @@ git push -u origin main
 
 ## 第四步：启用GitHub Pages
 
-1. 进入你的仓库：https://github.com/linan2/linan2.github.io
+1. 进入你的仓库：https://github.com/linan/linan.github.io
 2. 点击 "Settings" 标签
 3. 在左侧菜单找到 "Pages"
 4. 在 "Source" 部分：
@@ -44,11 +44,11 @@ git push -u origin main
 GitHub会在几分钟内自动部署你的网站。
 
 部署成功后，你可以通过以下地址访问：
-https://linan2.github.io
+https://linan.github.io
 
 ## 第六步：验证部署
 
-1. 等待几分钟后，访问 https://linan2.github.io
+1. 等待几分钟后，访问 https://linan.github.io
 2. 你应该能看到你的个人学术网站
 3. 如果未显示，稍等片刻（通常需要1-5分钟）
 
@@ -67,7 +67,7 @@ GitHub会自动重新部署你的网站。
 ## 常见问题
 
 ### 网站无法访问
-- 确保仓库名称完全匹配：`linan2.github.io`
+- 确保仓库名称完全匹配：`linan.github.io`
 - 检查GitHub Pages设置是否正确启用
 - 等待几分钟让部署完成
 
@@ -83,7 +83,7 @@ GitHub会自动重新部署你的网站。
 1. 在GitHub仓库的 Pages 设置中，填入你的自定义域名
 2. 在你的域名DNS设置中，添加CNAME记录：
    - 名称：`www`（或根域名）
-   - 值：`linan2.github.io`
+   - 值：`linan.github.io`
 3. 等待DNS生效（通常24-48小时）
 
 ## 联系支持

@@ -33,7 +33,7 @@ I am a Lecturer at Tianjin Normal University. I received my Ph.D. in Computer Sc
 
 - 📧 Email: tju_linan@tju.edu.cn
 - 📚 Google Scholar: https://scholar.google.com.hk/citations?user=9BVJbdsAAAAJ&hl=zh-CN
-- 🔧 GitHub: https://github.com/linan2
+- 🔧 GitHub: https://github.com/linan
 
 ## 荣誉奖项 / Awards & Honors
 
@@ -64,12 +64,12 @@ This website supports **bilingual** (Simplified Chinese and English), built with
 
 The website is configured for GitHub Pages, accessible at:
 
-**https://linan2.github.io**
+**https://linan.github.io**
 
 ### 本地预览 / Local Preview
 
 ```bash
-cd e:/ai_work/linan2.github.io
+cd e:/ai_work/linan.github.io
 # 使用Python启动本地服务器
 python -m http.server 8000
 # 然后访问 http://localhost:8000
