@@ -12,7 +12,7 @@
 在项目目录中执行以下命令：
 
 ```bash
-git remote add origin https://github.com/linan/linan.github.io.git
+git remote add origin https://github.com/linan2/linan2.github.io.git
 ```
 
 ## 第三步：推送代码到GitHub
@@ -30,7 +30,7 @@ git push -u origin main
 
 ## 第四步：启用GitHub Pages
 
-1. 进入你的仓库：https://github.com/linan/linan.github.io
+1. 进入你的仓库：https://github.com/linan2/linan2.github.io
 2. 点击 "Settings" 标签
 3. 在左侧菜单找到 "Pages"
 4. 在 "Source" 部分：

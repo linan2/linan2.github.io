@@ -33,7 +33,7 @@ I am a Lecturer at Tianjin Normal University. I received my Ph.D. in Computer Sc
 
 - 📧 Email: tju_linan@tju.edu.cn
 - 📚 Google Scholar: https://scholar.google.com.hk/citations?user=9BVJbdsAAAAJ&hl=zh-CN
-- 🔧 GitHub: https://github.com/linan
+- 🔧 GitHub: https://github.com/linan2
 
 ## 荣誉奖项 / Awards & Honors
 
