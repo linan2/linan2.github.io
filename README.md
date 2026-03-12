@@ -52,8 +52,11 @@ This website supports **bilingual** (Simplified Chinese and English), built with
 
 - `index.html` - 英文主页（默认）/ English homepage (default)
 - `index-zh.html` - 简体中文主页 / Simplified Chinese homepage
+- `.nojekyll` - 告诉GitHub Pages跳过Jekyll构建 / Tells GitHub Pages to skip Jekyll build
 - 语言切换按钮位于页面右上角
 - Language switcher located at top-right corner
+
+**重要提示**：`.nojekyll`文件确保GitHub Pages直接部署静态文件，不尝试使用Jekyll构建。
 
 ## 部署说明 / Deployment
 
