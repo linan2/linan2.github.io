@@ -2,7 +2,7 @@
 
 欢迎访问我的个人学术网站！
 
-Welcome to my personal academic website!
+Welcome to my personal academic website! **https://linan2.github.io**
 
 ## 关于我 / About Me
 
@@ -64,7 +64,7 @@ This website supports **bilingual** (Simplified Chinese and English), built with
 
 The website is configured for GitHub Pages, accessible at:
 
-**https://linan.github.io**
+**https://linan2.github.io**
 
 ### 本地预览 / Local Preview
 
