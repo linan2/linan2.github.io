@@ -8,8 +8,8 @@ REM Check if git is initialized
 if not exist ".git" (
     echo Git repository not found. Initializing...
     git init
-    git config user.name "linan"
-    git config user.email "tju_linan@tju.edu.cn"
+    git config user.name "linan2"
+    git config user.email "linanvae@163.com"
 )
 
 REM Check if remote is configured
