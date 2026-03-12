@@ -17,7 +17,7 @@ git remote -v | findstr "origin" >nul
 if %errorlevel% neq 0 (
     echo.
     echo Configuring remote repository...
-    git remote add origin https://github.com/linan/linan.github.io.git
+    git remote add origin https://github.com/linan2/linan.github.io.git
 )
 
 REM Stage all changes
