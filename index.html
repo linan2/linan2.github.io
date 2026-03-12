@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li Nan - Speech Processing Researcher</title>
+    <!-- Busuanzi Statistics Script -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -330,6 +333,77 @@
             text-decoration: underline;
         }
 
+        .visitor-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .busuanzi_container {
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .header-text h1 {
+                font-size: 2em;
+            }
+
+            .visitor-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-number {
+                font-size: 1.8em;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -625,6 +699,27 @@
                 </li>
             </ul>
         </section>
+
+        <div class="visitor-stats">
+            <div class="stat-item">
+                <span class="stat-number">
+                    <span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv">...</span>
+                </span>
+                <span class="stat-label">Total Visits</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">
+                    <span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv">...</span>
+                </span>
+                <span class="stat-label">Unique Visitors</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">
+                    <span id="busuanzi_value_page_pv" class="busuanzi_value_page_pv">...</span>
+                </span>
+                <span class="stat-label">Page Views</span>
+            </div>
+        </div>
 
         <footer>
             <p>&copy; 2025 Li Nan. All rights reserved.</p>
